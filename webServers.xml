@@ -1,0 +1,14 @@
+<application>
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="482414e2-9634-4055-8d8d-85e47fd6fb3e" name="odoo" url="http://localhost">
+        <fileTransfer host="localhost" port="22" rootFolder="/usr/lib/python2.7/dist-packages/odoo" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</application>
