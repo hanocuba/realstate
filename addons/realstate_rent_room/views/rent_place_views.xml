@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="rent_place_form" model="ir.ui.view">
+            <field name="name">realstate_rent_room.rent_place.form</field>
+            <field name="model">realstate_rent_room.rent_place</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="create_contract" type="object" string="Rentar" class="oe_stat_button"
+                                    icon="fa-file-text-o" state="free" attrs="{'invisible': [('for_sale','=', True)]}"/>
+
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                            </button>
+                        </div>
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;:&quot;image_medium&quot;}"/>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" placeholder="Nombre del lugar" required="1"/>
+                            </h1>
+                        </div>
+
+                        <group>
+                            <field name="place_number" required="1"/>
+                            <field name="for_sale"/>
+                        </group>
+
+                        <group>
+                            <group>
+                                <field name="place_type_id" required="1"/>
+                            </group>
+                            <group>
+                                <field name="parent_id"/>
+                            </group>
+                        </group>
+                        <field name="id" invisible="1"/>
+                        <notebook>
+                            <page string="Sublocales">
+                                <field name="children_id" nolabel="1">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="place_type_id"/>
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Servicios">
+                                <field name="list_services_id" nolabel="1"/>
+                            </page>
+                            <page string="Información Extra">
+                                <field name="extra_info_id" nolabel="1">
+                                    <tree editable="bottom">
+                                        <field name="name" required="1"/>
+                                        <field name="value" required="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Fotos">
+                                <field name="images_id"  class="oe_edit_only"/>
+                                <field name="image_gallery" widget="leaft_gallery" options="{'always_reload': True,
+                                                                                        'gallery_model': 'realstate_rent_room.rent_place_image'}"/>
+                            </page>
+                        </notebook>
+
+                        <group>
+                            <field name="description"/>
+                        </group>
+
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="rent_place_tree" model="ir.ui.view">
+            <field name="name">realstate_rent_room.rent_place.tree</field>
+            <field name="model">realstate_rent_room.rent_place</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name" />
+                    <field name="place_number"/>
+                    <field name="parent_id"/>
+                    <field name="for_sale"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="rent_place_search" model="ir.ui.view">
+            <field name="name">realstate_rent_room.rent_place.search</field>
+            <field name="model">realstate_rent_room.rent_place</field>
+            <field name="arch" type="xml">
+                <search string="">
+
+                </search>
+            </field>
+        </record>
+
+        <record id="rent_place_action" model="ir.actions.act_window">
+            <field name="name">Lugares</field>
+            <field name="res_model">realstate_rent_room.rent_place</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="rent_place_search"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                  Click para crear el primer lugar de renta.
+              </p><p>
+                Usted podrá crear agrupar y organizar los lugares de renta, asi como asociar
+                servicios que debe pagar el cliente. Puede también poner información extra adicional
+                donde el cliente puede informarse de todos los beneficios del lugar.
+              </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

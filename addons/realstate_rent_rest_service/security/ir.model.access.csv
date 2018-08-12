@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_realstate_rent_rest_service_realstate_rent_rest_service,realstate_rent_rest_service.realstate_rent_rest_service,model_realstate_rent_rest_service_realstate_rent_rest_service,,1,0,0,0

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="realstate_rent_room_menu_root" name="Renta"/>
+
+        <menuitem id="realstate_rent_room_general_menu" name="General"
+                  parent="realstate_rent_room_menu_root" />
+
+        <menuitem id="rent_place_action_menu" action="rent_place_action"
+                  parent="realstate_rent_room_general_menu" />
+    </data>
+</odoo>

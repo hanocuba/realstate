@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="map_template" style="height:300px;">
+        <div id="map_area" style="height:300px; width: 100%;"></div>
+    </t>
+
+    <t t-name="map_galleria" style="height:300px;">
+        <div id="galleria" class="galleria" style="height:300px; width: 100%;">
+            <!--<div class="galleria-images">-->
+
+            <!--</div>-->
+        </div>
+    </t>
+</templates>
+
