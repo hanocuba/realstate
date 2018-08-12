@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_map_leaft_map_leaft,map_leaft.map_leaft,model_map_leaft_map_leaft,,1,0,0,0

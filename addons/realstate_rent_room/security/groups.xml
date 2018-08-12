@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.module.category" id="module_management">
+            <field name="name">Renta</field>
+            <field name="description">Usuarios con permiso de arrendamientos</field>
+            <field name="sequence">3</field>
+        </record>
+
+        <record id="rent_manager" model="res.groups">
+            <field name="name">Arrendatario</field>
+            <field name="category_id" ref="realstate_rent_room.module_management"/>
+        </record>
+
+    </data>
+</odoo>

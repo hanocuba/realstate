@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_backend" name="leaft_map assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/map_leaft/static/src/js/galleria_1_5_7.min.js" />
+
+                <link rel="stylesheet" href="/map_leaft/static/src/css/leaftlet.css"/>
+                <!--<script type="text/javascript" src="/map_leaft/static/src/js/leaflet.js"/>-->
+                <script type="text/javascript" src="/map_leaft/static/src/js/leaflet-src.js"/>
+
+                <script type="text/javascript" src="/map_leaft/static/src/js/leaft_map.js"/>
+            </xpath>
+
+        </template>
+    </data>
+</odoo>
