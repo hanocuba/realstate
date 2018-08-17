@@ -10,6 +10,10 @@
           <option name="url" value="http://142.93.125.99" />
           <option name="userName" value="hanoi" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="http://192.168.1.10" />
+          <option name="userName" value="hanoi" />
+        </UrlAndUserName>
       </list>
     </option>
   </component>
