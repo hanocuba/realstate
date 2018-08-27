@@ -14,6 +14,10 @@
           <option name="url" value="http://192.168.1.10" />
           <option name="userName" value="hanoi" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="http://gitlab.frcuba.cu" />
+          <option name="userName" value="developers" />
+        </UrlAndUserName>
       </list>
     </option>
   </component>
