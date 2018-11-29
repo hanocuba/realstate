@@ -18,6 +18,10 @@
           <option name="url" value="http://gitlab.frcuba.cu" />
           <option name="userName" value="developers" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="http://gitlab.syscu.com:443" />
+          <option name="userName" value="root" />
+        </UrlAndUserName>
       </list>
     </option>
   </component>
