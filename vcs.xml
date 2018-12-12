@@ -22,6 +22,10 @@
           <option name="url" value="http://gitlab.syscu.com:443" />
           <option name="userName" value="root" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="http://gitlab.syscu.com" />
+          <option name="userName" value="scnetisla@gmail.com" />
+        </UrlAndUserName>
       </list>
     </option>
   </component>
